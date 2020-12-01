@@ -9,7 +9,7 @@ def parse_report():
 def find_product_of_two_by_sum(report, sum_to_find):
     for num in report:
         search_value = sum_to_find - num
-        if report.count(search_value) > 0:
+        if search_value in report:
             return num * search_value
     return None
 
@@ -18,7 +18,7 @@ def find_product_of_three_by_sum(report, sum_to_find):
     for i, num in enumerate(report):
         for j in range(i + 1, len(report)):
             search_value = sum_to_find - num - report[j]
-            if report.count(search_value) > 0:
+            if search_value in report:
                 return num * search_value * report[j]
     return None
 
