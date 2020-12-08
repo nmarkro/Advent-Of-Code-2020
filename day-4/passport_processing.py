@@ -9,7 +9,6 @@ def parse_passports():
         for line in f.readlines():
             if(line == "\n"):
                 passports.append(passport)
-                #print(passport)
                 passport = {}
             else:
                 fields = re.findall(passport_format, line.strip())
